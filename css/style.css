@@ -1,0 +1,708 @@
+/*Ajustes iniciales y cabecera*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    height: 100%;   
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.headerProductos{
+    margin: 0%;
+}
+.logoPrincipal{
+    width: 230px;
+    height: 200px;
+    margin: 25px 0;
+}
+
+
+/* Estructurando grid my page */
+
+
+/* Estructura grid-index*/
+
+.mainHome{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 20% 80% ;
+    grid-template-areas:
+                        "h1 h1 h1"
+                        "img-1 img-2 img-3";
+    justify-items: center;
+    align-items: center;
+}
+.mainHome img{
+    width: 100%;
+    height: 80%;
+}
+.menuNav{
+    width: 100%;  
+}
+
+/*estilo del H1 del index*/
+.h1Inicio{
+    grid-area: h1;
+}
+.estiloH1Inicio{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 200%;
+    font-weight: bold;
+}
+   /* --------- */
+
+.imgIndex1{
+    grid-area: img-1;
+    justify-self: end;
+    width: 50%;
+    height: 80%;
+    margin: 30px 30px;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    font-size: 90%;
+    text-align: center;
+    border-style: outset;
+}
+.imgIndex1 img{
+    width: 95%;
+    height: 75%;
+}
+.imgIndex2{
+    grid-area: img-2;
+    width: 50%;
+    height: 80%;
+    margin: 30px 30px;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    font-size: 90%;
+    text-align: center;
+    border-style: outset;
+}
+.imgIndex2 img{
+    width: 95%;
+    height: 75%;
+}
+.imgIndex3{
+    grid-area: img-3;
+    justify-self: start;
+    width: 50%;
+    height: 80%;
+    margin: 30px 30px;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    font-size: 90%;
+    text-align: center;
+    border-style: outset;
+}
+.imgIndex3 img{
+    width: 95%;
+    height: 75%;
+}
+
+
+
+/* Estructura grid-La-Tienda*/
+
+.mainLaTienda{
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+                        "ubicacion ubicacion"
+                        "mainLaTienda1 mainLaTienda2" ;
+                        
+    column-gap: 10px;
+    height: auto;
+}
+.ubicacion{
+    grid-area: ubicacion;
+}
+.mainLaTienda1{
+    grid-area: mainLaTienda1;
+}
+.mainLaTienda2{
+    grid-area: mainLaTienda2;
+}
+
+
+/*Estructura grid Contacto*/
+
+.hojaContacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 55% 35%;
+    grid-template-areas:
+                        "header header"
+                        "main main"
+                        "footer footer";
+    background-image: url(../img/background.image/fondo.contacto.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 130vh;
+}
+.headerContacto{
+    grid-area: header;
+}
+.mainContacto{
+    grid-area: main;
+    margin-bottom: 40px;
+}
+.footerStyleContacto{
+    grid-area: footer;
+}
+
+/* Estilos de formulario de contacto */
+
+.formulario{
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background: rgb(0, 0, 0, 0.6);
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+}
+.form{
+    padding: 10px;
+    margin: 5px;
+}
+.form label{
+    padding: 3px;
+    margin-right: 20px;
+}
+.form input{
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    border-style: hidden;
+}
+.formDistinto{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
+}
+.formDistinto input{
+    width: 500px;
+    height: 100px;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;  
+    border-style: hidden;
+}
+.formButton{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+.formButton input{
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 10px;
+    border-style: hidden;
+    font-family: 'Abel', sans-serif;
+    font-size: 90%;
+}
+
+
+/*Estructura grid  mas..*/
+
+.headerMas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mainMas{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 30% 50%;
+    grid-template-areas: 
+                        "estiloTip"
+                        "imgMas"
+                        "listaTip";
+    align-items: center;
+    height: 100%;
+}
+.estiloTip{
+    grid-area: estiloTip;
+    display: flex;
+    justify-content: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    height: 100%;
+}
+.imgMas{
+    grid-area: imgMas;
+    display: flex;
+    justify-content: center;
+}
+.listaTip{
+    grid-area: listaTip;
+    margin: 30px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    background-color: black;
+    color: whitesmoke;
+    width: auto;
+    border-radius: 20px;
+}
+.imgMas img{
+    width: 40%;
+    height: 40%;
+}
+
+
+/*resto estilos de mas/*
+
+/* Estilos Mas.. */
+
+.h1Mas{
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    margin: 20px 0;
+    color: #59CE8F;
+    text-shadow: 4px 1px 5px black; 
+    font-size: 40px;
+}   
+.estiloTip h2{
+    margin: 10px 60px;
+} 
+.listaTip ul{
+    margin: 30px;
+    padding: 10px;
+}
+
+
+/* --Fin estructura grid--*/
+
+
+/*estilo del menu*/
+
+nav{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    justify-content: center;   
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    background-color: black;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+nav ul li a:hover{
+    background: rgb(47, 116, 47);
+}
+nav div a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    background-color: black;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+nav div a:hover{
+    background: rgb(47, 116, 47);
+}
+
+
+/*estilo del submenu productos*/
+
+.menuSecundario{
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    justify-content: center;
+    background: green;    
+}
+.menuSecundario a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+.menuSecundario a:hover{
+    background: rgb(65, 163, 65);
+}
+
+
+/*estilo del buscador*/
+
+.buscador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    padding: 5px;
+    background-image: url(../img/background.image/Foto-dietéticas.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.buscador input{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    margin: 20px;
+    padding: 0px 20px;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.buscador:hover input{
+    width: 280px;
+    height: 35px;
+    border: 1px solid rgb(73, 92, 73);
+}
+.buscador input:focus{
+    width: 300px;
+}
+.logoBuscar{
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;  
+    right: 0;
+}
+
+
+
+/*estilo del H1 de productos*/
+
+.h1Productos{
+    text-align: center;
+    color: green;
+    font-family: 'Abel', sans-serif;
+    font-size: 40px;
+    margin-top: 30px;
+}
+.cabeceraProductos{
+    width: 100%;
+    height: 120px;
+    background-image: url(../img/background.image/fondo.productos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/*estilos de la lista de productos*/
+
+.productos img{
+    width: 200px;
+}
+.productos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+.cuadro{
+    margin: 30px 30px;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    border-style: outset;
+}
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px 30px;
+    padding: 0px;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+    border-style: outset;
+}
+.subname{
+    display: flex;
+    flex-direction: column;
+    background: rgb(13, 13, 97);
+    height: 30px;
+    width: 200px;
+    padding: 5px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    color: whitesmoke;
+    text-align: center;
+    font-weight: bold;  
+}
+
+
+/* Estilos la tienda */
+
+.tienda{
+    border-bottom: 20px solid green;
+}
+.h1Tienda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Satisfy', cursive;   
+    color: rgb(25, 133, 25);
+    text-shadow: 3px 1px 3px black;
+    margin: 0;  
+    width: 100%;
+    height: 18vh;
+    background-image: url(../img/background.image/fondo.productos.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ubicacion{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+}
+.ubicacion img{
+    width: 50px;
+    height: 60px; 
+}
+.mapa{
+    width: 70%;
+    height: 60hv;
+    border: 1px solid black;
+}
+.mainLaTienda1{
+    margin: 0 0 50px 20px;
+    height: auto;
+}
+.mainLaTienda2{
+    display: flex;
+    flex-direction: column;
+}
+.tiendaIcon{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.p-icon{
+    margin: 10px;
+    align-items: center;
+    font-family: 'Abel', sans-serif;
+}
+
+
+
+/* Estilo del footer - padre*/
+
+footer {
+    color: whitesmoke;  
+    background-color: black;
+    overflow: hidden;
+    padding: 20px 0 30px 0;
+    margin-top: 30px;
+    font-family: 'Abel', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/*estilo de item-1 (hijo)*/
+
+.logoPago{
+    padding: 30px;    
+}
+.h2Pago{
+    margin-bottom: 10px;
+}
+.logoPago img{
+    width: 72px;
+    height: 37px;
+    margin-bottom: 50px;
+    padding: 2px; 
+}
+
+
+/*estilo de item-2 (hijo)*/
+
+.logoRedes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 220px;
+    padding: 5px;
+    border-radius: 50%;   
+}
+.logoI{
+    width: 40px;
+    height: 40px;
+}
+.h2Posicion{
+    margin: 34px 0px 5px 10px;
+}
+.logoStyle{
+    font-size: 17px;
+}
+.logoF{
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+    margin: 0px 3px 0px 12px;   
+}
+
+
+
+/* Media Queries */
+
+
+@media screen and (max-width: 800px) {
+    
+    /* index */
+
+    .menuNav{
+        display: flex;
+        flex-direction: row;
+    }
+    .buscador{
+        height: auto;
+    }
+    .buscador input{
+        display: none;
+    }
+    nav ul li{
+        display: flex;
+        flex-direction: column;
+    }
+    .indexNav{
+        justify-content: start;
+        width: auto;
+    }
+    .mainHome{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    .logoRedes{
+        justify-content: start;
+        width: 100%;
+    }
+    .logoPago{
+        margin: 0;
+        padding: 10px;  
+    }
+    .logoPago img{
+        margin: 5px;
+    }
+
+
+     /* La Tienda */
+
+     .tienda{
+        display: flex;
+        flex-direction: row;
+        height: auto;
+    }
+    .menuTienda{   
+        display: flex;
+        flex-direction: column;     
+    }
+    .h1Tienda{  
+        height: 230px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .mainLaTienda{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+
+    /* Mas.. */
+
+    .headerMas nav div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .headerMas nav div a{
+        padding: 5px;
+        font-size: 80%;
+    }
+    .mainMas{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+
+
+    /* Contacto */
+
+    .headerContacto nav div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .headerContacto nav div a{
+        padding: 5px;
+        font-size: 80%;
+    }
+    .hojaContacto{
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+    .footerStyleContacto{
+        display: none;
+    }
+    .formulario{
+        width: 100%;
+        margin: auto;
+    }
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
+    .formDistinto input{
+        width: 100%;
+    }
+    .formButton{
+        padding: 0x;
+        gap: 2px;
+    }
+    .formButton input{
+        width: 70%;
+    }
+}
