@@ -5,11 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{   
     height: 100%;   
 }
-
 header{
     display: flex;
     flex-direction: column;
@@ -23,6 +21,9 @@ header{
     width: 230px;
     height: 200px;
     margin: 25px 0;
+}
+.logoPrincipal:hover {
+    transform: scale(1.2);
 }
 
 
@@ -334,7 +335,8 @@ nav div a:hover{
     top: 0;
     width: 100%;
     justify-content: center;
-    background: green;    
+    /*background: green;*/
+    background-image: linear-gradient(to right, green, #75B79E)    
 }
 .menuSecundario a{
     text-decoration: none;
@@ -345,7 +347,8 @@ nav div a:hover{
     margin: 0px;
 }
 .menuSecundario a:hover{
-    background: rgb(65, 163, 65);
+    background: #587850;
+    box-shadow: 1px 1px 5px black;
 }
 
 
