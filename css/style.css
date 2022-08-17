@@ -168,6 +168,11 @@ header{
 
 /* Estilos de formulario de contacto */
 
+.nav-contacto{
+   margin-left: 0;
+   margin-bottom: 10px; 
+}
+
 .formulario{
     width: 90%;
     max-width: 600px;
@@ -226,6 +231,7 @@ header{
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    padding: 0;
 }
 
 .mainMas{
@@ -343,6 +349,12 @@ nav div a:hover{
     padding: 10px;
     margin: 30px 0;
 }
+.nav-productos{
+    margin-left: 0;
+}
+.buscador{
+    margin-top: 80px;
+}
 
 
 /*estilo del H1 de productos*/
@@ -382,8 +394,12 @@ nav div a:hover{
 
 /* Estilos la tienda */
 
+.nav-tienda{
+    position: static;
+}
 .tienda{
     border-bottom: 20px solid green;
+    padding: 0;
 }
 .h1Tienda{
     display: flex;
@@ -551,7 +567,7 @@ footer {
 
      .tienda{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         height: auto;
     }
     .menuTienda{   
@@ -573,15 +589,6 @@ footer {
 
     /* Mas.. */
 
-    .headerMas nav div{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-    .headerMas nav div a{
-        padding: 5px;
-        font-size: 80%;
-    }
     .mainMas{
         display: flex;
         flex-direction: column;
@@ -592,15 +599,6 @@ footer {
 
     /* Contacto */
 
-    .headerContacto nav div{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-    .headerContacto nav div a{
-        padding: 5px;
-        font-size: 80%;
-    }
     .hojaContacto{
         display: flex;
         flex-direction: column;
@@ -615,7 +613,7 @@ footer {
     }
     .formulario{
         width: 100%;
-        margin: auto;
+        margin: 30px 0;
     }
     .form{
         display: flex;
