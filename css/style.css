@@ -9,7 +9,6 @@
 body{   
     height: 100%;   
 }
-
 header{
     display: flex;
     flex-direction: column;
@@ -30,6 +29,7 @@ header{
 .logoPrincipal:hover {
     transform: scale(1.2);
 }
+
 
 
 /* Estructurando grid my page */
@@ -222,6 +222,7 @@ header{
 
 /*Estructura grid  mas..*/
 
+
 .headerMas{
     display: flex;
     flex-direction: column;
@@ -229,7 +230,6 @@ header{
     margin-bottom: 20px;
     padding: 0;
 }
-
 .mainMas{
     display: grid;
     grid-template-columns: 100%;
