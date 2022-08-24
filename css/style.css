@@ -1,448 +1,97 @@
 /*Ajustes iniciales y cabecera*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body{   
-    height: 100%;   
-}
-header{
+/* estilos del index*/
+body {
+  height: 100%; }
+  body header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 40px;
-}
-.headerIndex{
-    border-top: 20px solid #34626c6e;
-}
-.headerProductos{
-    width: 100%;
-}
-.logoPrincipal{
-    width: 230px;
-    height: 200px;
-    margin: 40px 0;
-}
-.logoPrincipal:hover {
-    transform: scale(1.2);
-}
-
-
-
-/* Estructurando grid my page */
-
-
-/* Estructura grid-index*/
-
-.mainHome{
+    margin-bottom: 40px; }
+    body header nav ul li a:hover {
+      background: #7ebd57; }
+    body header nav div a:hover {
+      background: #687a68; }
+  body .headerIndex {
+    border-top: 20px solid #34626c6e; }
+    body .headerIndex .logoPrincipal {
+      width: 230px;
+      height: 200px;
+      margin: 40px 0; }
+    body .headerIndex .logoPrincipal:hover {
+      transform: scale(1.2); }
+    body .headerIndex .menuNav {
+      width: 100%; }
+      body .headerIndex .menuNav nav {
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: center; }
+        body .headerIndex .menuNav nav ul li {
+          display: inline-block; }
+    body .headerIndex .indexNav {
+      background-image: linear-gradient(to right, #34626C, black); }
+      body .headerIndex .indexNav ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 10px;
+        font-family: 'Abel', sans-serif;
+        font-size: 18px;
+        margin: 0px; }
+      body .headerIndex .indexNav ul li a:hover {
+        background: #60A9A6; }
+    body .headerIndex div div div img {
+      width: auto;
+      height: 60vh; }
+  body .mainHome {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    grid-template-rows: 20% 80% ;
-    grid-template-areas:
-                        "h1 h1 h1 h1"
-                        "img-1 img-2 img-3 img-4";
-    justify-items: center;
-    align-items: center;
-}
-.mainHome img{
-    width: 100%;
-    height: 80%;
-}
-.menuNav{
-    width: 100%;
-}
-
-/*estilo del carrusel*/
-
-.img-carousel{
-    width: auto;
-    height: 60vh;
-}
-
-
-/*estilo del H1 del index*/
-.h1Inicio{
-    grid-area: h1;
-    margin: 40px 0;  
-}
-.estiloH1Inicio{
-    text-align: center;
-    font-family: 'Abel', sans-serif;
-    font-size: 200%;
-    font-weight: bold;
-}
-   /* --------- */
-
-.imgIndex1{
-    grid-area: img-1;
-    justify-self: center;
-    width: 55%;
-    text-align: center;
-}
-.imgIndex2{
-    grid-area: img-2;
-    justify-self: center;
-    width: 75%;
-    text-align: center;
-}
-.imgIndex3{
-    grid-area: img-3;
-    justify-self: center;
-    width: 55%;
-    text-align: center;
-}
-.imgIndex4{
-    grid-area: img-4;
-    justify-self: center;
-    width: 55%;
-    text-align: center;
-}
-.h3Index{
-    font-size: 1.5rem;
-}
-.animacionCard:hover {
-    transform: scale(1.3);
-    box-shadow: 2px 2px 10px rgba(75, 72, 72, 0.24);
-}
-
-
-
-/* Estructura grid-La-Tienda*/
-
-.mainLaTienda{
-    display: grid;
-    grid-template-columns: 1.5fr 0.8fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 20% 80%;
-    grid-template-areas:
-                        "ubicacion ubicacion"
-                        "mainLaTienda1 mainLaTienda2" ;
-                        
-    column-gap: 10px;
-    height: auto;
-}
-.ubicacion{
-    grid-area: ubicacion;
-}
-.mainLaTienda1{
-    grid-area: mainLaTienda1;
-}
-.mainLaTienda2{
-    grid-area: mainLaTienda2;
-}
-
-
-/*Estructura grid Contacto*/
-
-.hojaContacto{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 10% 55% 35%;
-    grid-template-areas:
-                        "header header"
-                        "main main"
-                        "footer footer";
-    background-image: url(../img/background.image/fondo.contacto.jpg);
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-    background-position:center;
-    background-repeat: no-repeat;
-    height: 130vh;
-}
-.headerContacto{
-    grid-area: header;
-}
-.mainContacto{
-    grid-area: main;
-    margin-bottom: 40px;
-}
-.footerStyleContacto{
-    grid-area: footer;
-}
-
-/* Estilos de formulario de contacto */
-
-.nav-contacto{
-   margin-left: 0;
-   margin-bottom: 10px; 
-}
-
-.formulario{
-    width: 90%;
-    max-width: 600px;
-    margin: auto;
-    background: rgb(0, 0, 0, 0.6);
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
+    grid-template-areas: "h1 h1 h1 h1" "img-1 img-2 img-3 img-4";
+    justify-items: center;
+    align-items: center; }
+    body .mainHome .h1Inicio {
+      grid-area: h1;
+      margin: 40px 0; }
+      body .mainHome .h1Inicio .estiloH1Inicio {
+        text-align: center;
+        font-family: 'Abel', sans-serif;
+        font-size: 200%;
+        font-weight: bold; }
+    body .mainHome div img {
+      width: 100%;
+      height: 80%; }
+    body .mainHome div .h3Index {
+      font-size: 1.5rem; }
+    body .mainHome .imgIndex1 {
+      grid-area: img-1;
+      justify-self: center;
+      width: 55%;
+      text-align: center; }
+    body .mainHome .imgIndex2 {
+      grid-area: img-2;
+      justify-self: center;
+      width: 75%;
+      text-align: center; }
+    body .mainHome .imgIndex3 {
+      grid-area: img-3;
+      justify-self: center;
+      width: 55%;
+      text-align: center; }
+    body .mainHome .imgIndex4 {
+      grid-area: img-4;
+      justify-self: center;
+      width: 55%;
+      text-align: center; }
+    body .mainHome .animacionCard:hover {
+      transform: scale(1.3);
+      box-shadow: 2px 2px 10px rgba(75, 72, 72, 0.24); }
+  body footer {
     color: whitesmoke;
-}
-.form{
-    padding: 10px;
-    margin: 5px;
-}
-.form label{
-    padding: 3px;
-    margin-right: 20px;
-}
-.form input{
-    width: 250px;
-    height: 25px;
-    border-radius: 10px;
-    border-style: hidden;
-}
-.formDistinto{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    margin: 5px;
-}
-.formDistinto input{
-    width: 500px;
-    height: 100px;
-    margin: 10px 0 10px 0;
-    border-radius: 10px;  
-    border-style: hidden;
-}
-.formButton{
-    display: flex;
-    justify-content: space-around;
-    padding: 5px;
-}
-.formButton input{
-    width: 10rem;
-    height: 1.5rem;
-    border-radius: 10px;
-    border-style: hidden;
-    font-family: 'Abel', sans-serif;
-    font-size: 90%;
-}
-
-
-/*Estructura grid  mas..*/
-
-
-.headerMas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 0;
-}
-.mainMas{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 30% 50%;
-    grid-template-areas: 
-                        "estiloTip"
-                        "imgMas"
-                        "listaTip";
-    align-items: center;
-    height: 100%;
-}
-.estiloTip{
-    grid-area: estiloTip;
-    display: flex;
-    justify-content: center;
-    font-family: 'Abel', sans-serif;
-    font-size: 1.5rem;
-    height: 100%;
-}
-.imgMas{
-    grid-area: imgMas;
-    display: flex;
-    justify-content: center;
-}
-.listaTip{
-    grid-area: listaTip;
-    margin: 30px;
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
-    background-color: black;
-    color: whitesmoke;
-    width: auto;
-    border-radius: 20px;
-}
-.imgMas img{
-    width: 40%;
-    height: 40%;
-}
-
-
-/*resto estilos de mas/*
-
-/* Estilos Mas.. */
-
-.h1Mas{
-    font-family: 'Edu VIC WA NT Beginner', cursive;
-    margin: 20px 0;
-    color: #59CE8F;
-    text-shadow: 4px 1px 5px black; 
-    font-size: 40px;
-}   
-.estiloTip h2{
-    margin: 10px 60px;
-} 
-.listaTip ul{
-    margin: 30px;
-    padding: 10px;
-}
-
-
-/* --Fin estructura grid--*/
-
-
-/*estilo del menu*/
-
-nav{
-    display: flex;
-    width: 100%;
-    padding-top: 10px;
-    justify-content: center;
-}
-.indexNav{
-    background-image: linear-gradient(to right, #34626C, black);
-}
-nav ul li{
-    display: inline-block;
-}
-.indexNav ul li a{
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 10px;
-    font-family: 'Abel', sans-serif;
-    font-size: 18px;
-    margin: 0px;
-}
-nav ul li a:hover{
-    background: rgb(126, 189, 87);
-}
-.indexNav ul li a:hover{
-    background: #60A9A6;
-}
-nav div a:hover{
-    background: rgb(104, 122, 104);
-}
-
-
-/*estilo del submenu productos*/
-
-.lista{
-    padding: 10px;
-    margin: 30px 0;
-}
-.nav-productos{
-    margin-left: 0;
-}
-.buscador{
-    margin-top: 80px;
-}
-
-
-/*estilo del H1 de productos*/
-
-.h1Productos{
-    text-align: center;
-    color: green;
-    font-family: 'Abel', sans-serif;
-    font-size: 40px;
-    margin-top: 30px;
-}
-.cabeceraProductos{
-    width: 100%;
-    height: 120px;
-    background-image: url(../img/background.image/fondo.productos.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-bottom: 3px solid #59CE8F;
-}
-
-
-/*estilos de la lista de productos*/
-
-.main-productos{
-    padding-right: 0;
-}
-.productos{
-    margin: 30px 0;
-}
-.tarjeta{
-    margin: 30px 30px;
-    padding: 0px;
-    font-family: 'Abel', sans-serif;
-}
-
-
-/* Estilos la tienda */
-
-.nav-tienda{
-    position: static;
-}
-.tienda{
-    border-bottom: 20px solid green;
-    padding: 0;
-}
-.h1Tienda{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Satisfy', cursive;   
-    color: rgb(25, 133, 25);
-    text-shadow: 3px 1px 3px black;
-    margin: 0;  
-    width: 100%;
-    height: 18vh;
-    background-image: url(../img/background.image/fondo.productos.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.ubicacion{
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-family: 'Abel', sans-serif;
-    font-size: 20px;
-}
-.ubicacion p {
-    margin-top: 20px;
-}
-.ubicacion img{
-    width: 50px;
-    height: 60px; 
-}
-.mapa{
-    width: 70%;
-    height: 60hv;
-    border: 1px solid black;
-}
-.mainLaTienda1{
-    margin: 0 0 50px 20px;
-    height: auto;
-}
-.mainLaTienda2{
-    display: flex;
-    flex-direction: column;
-}
-.tiendaIcon{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-.p-icon{
-    margin: 10px;
-    align-items: center;
-    font-family: 'Abel', sans-serif;
-}
-
-
-
-/* Estilo del footer - padre*/
-
-footer {
-    color: whitesmoke;  
     background-color: black;
     overflow: hidden;
     padding: 20px 0 30px 0;
@@ -450,174 +99,66 @@ footer {
     font-family: 'Abel', sans-serif;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-}
-
-
-/*estilo de item-1 (hijo)*/
-
-.logoPago{
-    padding: 30px;    
-}
-.h2Pago{
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-.logoPago img{
-    width: 72px;
-    height: 37px;
-    margin-bottom: 50px;
-    padding: 2px; 
-}
-
-
-/*estilo de item-2 (hijo)*/
-
-.logoRedes{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 220px;
-    padding: 5px;
-    border-radius: 50%;   
-}
-.logoI{
-    width: 40px;
-    height: 40px;
-}
-.h2Posicion{
-    margin: 34px 0px 5px 10px;
-    font-size: 1.5rem;
-}
-.logoStyle{
-    font-size: 17px;
-}
-.logoF{
-    width: 30px;
-    height: 30px;
-    padding: 3px;
-    margin: 0px 3px 0px 12px;   
-}
-
-
-
+    justify-content: space-between; }
+    body footer .logoPago {
+      padding: 30px; }
+      body footer .logoPago .h2Pago {
+        margin-bottom: 10px;
+        font-size: 1.5rem; }
+      body footer .logoPago img {
+        width: 72px;
+        height: 37px;
+        margin-bottom: 50px;
+        padding: 2px; }
+    body footer div .h2Posicion {
+      margin: 34px 0px 5px 10px;
+      font-size: 1.5rem; }
+    body footer div .logoRedes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 220px;
+      padding: 5px;
+      border-radius: 50%; }
+      body footer div .logoRedes .logoI {
+        width: 40px;
+        height: 40px; }
+      body footer div .logoRedes .logoStyle {
+        font-size: 17px; }
+      body footer div .logoRedes .logoF {
+        width: 30px;
+        height: 30px;
+        padding: 3px;
+        margin: 0px 3px 0px 12px; }
 
 /* Media Queries */
-
-
-
 @media screen and (max-width: 800px) {
-    
-    /* index */
-
-    .menuNav{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        width: auto;
-    }
-    .indexNav ul{
-        display: flex;
-        flex-wrap: nowrap;
-        width: auto;
-    }
-    .img-carousel{
-       height: auto;    
-    }
-    .indexNav ul li a {
+  /* index */
+  body header .menuNav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: auto; }
+    body header .menuNav .indexNav ul {
+      display: flex;
+      flex-wrap: nowrap;
+      width: auto; }
+      body header .menuNav .indexNav ul li a {
         width: 80%;
-        height: auto;
-    }
-    .mainHome{
-        display: flex;
-        flex-direction: column;
-    }
-    footer{
-        display: flex;
-        flex-direction: column;
-    }
-    .logoRedes{
-        justify-content: start;
-        width: 100%;
-    }
-    .logoPago{
-        margin: 0;
-        padding: 10px;  
-    }
-    .logoPago img{
-        margin: 5px;
-    }
-
-    /* Productos */
-
-    .lista{
-        width: 100%;
-    }
-
-     /* La Tienda */
-
-     .tienda{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-    .menuTienda{   
-        display: flex;
-        flex-direction: column;     
-    }
-    .h1Tienda{  
-        height: 230px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    .mainLaTienda{
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-
-
-    /* Mas.. */
-
-    .mainMas{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
-    }
-
-
-    /* Contacto */
-
-    .hojaContacto{
-        display: flex;
-        flex-direction: column;
-        background-size: cover;
-        background-attachment: fixed;
-        background-position:center;
-        background-repeat: no-repeat;
-        height: 100%;
-    }
-    .footerStyleContacto{
-        display: none;
-    }
-    .formulario{
-        width: 100%;
-        margin: 30px 0;
-    }
-    .form{
-        display: flex;
-        flex-direction: column;
-    }
-    .formDistinto input{
-        width: 100%;
-    }
-    .formButton{
-        padding: 0x;
-        gap: 2px;
-    }
-    .formButton input{
-        width: 70%;
-    }
-}
+        height: auto; }
+    body header .menuNav div div div img {
+      height: auto; }
+  body .mainHome {
+    display: flex;
+    flex-direction: column; }
+  body footer {
+    display: flex;
+    flex-direction: column; }
+    body footer .logoPago {
+      margin: 0;
+      padding: 10px; }
+      body footer .logoPago img {
+        margin: 5px; }
+    body footer div .logoRedes {
+      justify-content: start;
+      width: 100%; } }

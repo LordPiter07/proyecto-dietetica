@@ -1,0 +1,60 @@
+/* Media Queries */
+
+@media screen and (max-width: 800px) {
+    
+    /* index */
+
+    body{
+        header{
+            .menuNav{
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                width: auto;
+                .indexNav{
+                    ul{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        width: auto;
+                        li{
+                            a{
+                                width: 80%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                div{
+                    div{
+                        div{
+                            img{
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .mainHome{
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            .logoPago{
+                margin: 0;
+                padding: 10px;
+                img{
+                    margin: 5px;
+                }
+            }
+            div{
+                .logoRedes{
+                    justify-content: start;
+                    width: 100%;
+                }
+            }
+        }   
+    }
+}

@@ -1,0 +1,200 @@
+@import "base/variables";
+
+/*Ajustes iniciales y cabecera*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos del index*/
+
+body{
+    height: 100%;
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 40px;
+        nav{
+            ul{
+                li{
+                    a:hover{
+                        background: rgb(126, 189, 87);
+                    }
+                }
+            }
+            div{
+                a:hover{
+                    background: rgb(104, 122, 104);
+                }
+            }
+        }
+    }
+    .headerIndex{
+        border-top: 20px solid #34626c6e;
+        .logoPrincipal{
+            width: 230px;
+            height: 200px;
+            margin: 40px 0;
+        }
+        .logoPrincipal:hover{
+            transform: scale(1.2);
+        }
+        .menuNav{
+            width: 100%;
+            nav{
+                display: flex;
+                width: 100%;
+                padding-top: 10px;
+                justify-content: center;
+                ul{
+                    li{
+                        display: inline-block;
+                        }
+                    }
+                }
+            }
+            .indexNav{
+                background-image: linear-gradient(to right, $color-principal, black);
+                ul{
+                    li{
+                        a{
+                            text-decoration: none;
+                            color: whitesmoke;
+                            padding: 10px;
+                            font-family: 'Abel', sans-serif;
+                            font-size: 18px;
+                            margin: 0px;
+                        }
+                        a:hover{
+                            background: #60A9A6;
+                        }
+                    }
+                }
+            }
+            div{
+                div{
+                    div{
+                        img{
+                            width: auto;
+                            height: 60vh;
+                        }
+                    }
+                }
+            }
+        }
+    .mainHome{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 20% 80% ;
+        grid-template-areas:
+                            "h1 h1 h1 h1"
+                            "img-1 img-2 img-3 img-4";
+        justify-items: center;
+        align-items: center;
+        .h1Inicio{
+            grid-area: h1;
+            margin: 40px 0;
+            .estiloH1Inicio{
+                text-align: center;
+                font-family: 'Abel', sans-serif;
+                font-size: 200%;
+                font-weight: bold;
+            }
+        }
+        div{
+            img{
+                width: 100%;
+                height: 80%;
+            }
+            .h3Index{
+                font-size: 1.5rem;
+            }
+        }
+        .imgIndex1{
+            grid-area: img-1;
+            justify-self: center;
+            width: 55%;
+            text-align: center;
+        }
+        .imgIndex2{
+            grid-area: img-2;
+            justify-self: center;
+            width: 75%;
+            text-align: center;
+        }
+        .imgIndex3{
+            grid-area: img-3;
+            justify-self: center;
+            width: 55%;
+            text-align: center;
+        }
+        .imgIndex4{
+            grid-area: img-4;
+            justify-self: center;
+            width: 55%;
+            text-align: center;
+        }
+        .animacionCard:hover{
+            transform: scale(1.3);
+            box-shadow: 2px 2px 10px rgba(75, 72, 72, 0.24);
+        }
+    }
+    footer{
+        color: whitesmoke;  
+        background-color: black;
+        overflow: hidden;
+        padding: 20px 0 30px 0;
+        margin-top: 30px;
+        font-family: 'Abel', sans-serif;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .logoPago{
+            padding: 30px;
+            .h2Pago{
+                margin-bottom: 10px;
+                font-size: 1.5rem;
+            }
+            img{
+                width: 72px;
+                height: 37px;
+                margin-bottom: 50px;
+                padding: 2px;
+            }
+        }
+        div{
+            .h2Posicion{
+                margin: 34px 0px 5px 10px;
+                font-size: 1.5rem;
+            }
+            .logoRedes{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 220px;
+                padding: 5px;
+                border-radius: 50%;
+                .logoI{
+                    width: 40px;
+                    height: 40px;
+                }
+                .logoStyle{
+                    font-size: 17px;
+                }
+                .logoF{
+                    width: 30px;
+                    height: 30px;
+                    padding: 3px;
+                    margin: 0px 3px 0px 12px;   
+                }
+            }
+        }
+    }
+}
+
+
+
+@import "base/mediaqueries";
