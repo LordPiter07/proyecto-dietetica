@@ -57,4 +57,87 @@
             }
         }   
     }
+
+    /* Productos */ 
+
+    body{
+        .mainProductos{
+            div{
+                .lista{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    /* La Tienda */ 
+
+    body{
+        .tienda{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            .h1Tienda{
+                height: 230px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        .mainLaTienda{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    }
+
+    /* contacto */
+
+    .hojaContacto{
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position:center;
+        background-repeat: no-repeat;
+        height: 100%;
+        .mainContacto{
+            .formulario{
+                width: 100%;
+                margin: 30px 0;
+                fieldset{
+                    .form{
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .formDistinto{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                    .formButton{
+                        padding: 0x;
+                        gap: 2px;
+                        input{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .footerStyleContacto{
+            display: none;
+        }
+    }
+
+    /* Mas.. */ 
+
+    body{
+        .mainMas{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: auto;
+        }
+    }
 }

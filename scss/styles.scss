@@ -1,11 +1,11 @@
 @import "base/variables";
+@import "base/mapas";
+@import "base/extend";
+@import "base/mixin";
 
-/*Ajustes iniciales y cabecera*/
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    @extend %ajuste-inicial;
 }
 
 /* estilos del index*/
@@ -21,13 +21,13 @@ body{
             ul{
                 li{
                     a:hover{
-                        background: rgb(126, 189, 87);
+                        background: map-get($map: $nav-pages, $key: hover-menu);
                     }
                 }
             }
             div{
                 a:hover{
-                    background: rgb(104, 122, 104);
+                    background: map-get($map: $nav-pages, $key: hover-encabezado);
                 }
             }
         }
@@ -43,12 +43,12 @@ body{
             transform: scale(1.2);
         }
         .menuNav{
-            width: 100%;
+            width: map-get($map: $nav-home, $key: w-home);
             nav{
-                display: flex;
-                width: 100%;
-                padding-top: 10px;
-                justify-content: center;
+                display: map-get($map: $nav-home, $key: estilo-home);
+                justify-content: map-get($map: $nav-home, $key: ubicacion-home);
+                width: map-get($map: $nav-home, $key: w-home);
+                padding-top: map-get($map: $nav-home, $key: pdg-home);
                 ul{
                     li{
                         display: inline-block;
@@ -61,15 +61,15 @@ body{
                 ul{
                     li{
                         a{
-                            text-decoration: none;
-                            color: whitesmoke;
-                            padding: 10px;
                             font-family: 'Abel', sans-serif;
-                            font-size: 18px;
-                            margin: 0px;
+                            text-decoration: none;
+                            color: map-get($map: $nav-home, $key: color-home);
+                            padding: map-get($map: $nav-home, $key: pdg-home);
+                            font-size: map-get($map: $nav-home, $key: font-s-home);
+                            margin: map-get($map: $nav-home, $key: margin-home);
                         }
                         a:hover{
-                            background: #60A9A6;
+                            background: map-get($map: $nav-home, $key: hover-home);
                         }
                     }
                 }
@@ -115,31 +115,24 @@ body{
         }
         .imgIndex1{
             grid-area: img-1;
-            justify-self: center;
-            width: 55%;
-            text-align: center;
+            @include grid-tarjetas;
         }
         .imgIndex2{
             grid-area: img-2;
             justify-self: center;
-            width: 75%;
             text-align: center;
+            width: 75%;
         }
         .imgIndex3{
             grid-area: img-3;
-            justify-self: center;
-            width: 55%;
-            text-align: center;
+            @include grid-tarjetas;
         }
         .imgIndex4{
             grid-area: img-4;
-            justify-self: center;
-            width: 55%;
-            text-align: center;
+            @include grid-tarjetas;
         }
         .animacionCard:hover{
-            transform: scale(1.3);
-            box-shadow: 2px 2px 10px rgba(75, 72, 72, 0.24);
+            @include animacion-card;
         }
     }
     footer{
@@ -183,6 +176,7 @@ body{
                 }
                 .logoStyle{
                     font-size: 17px;
+                    margin-top: 10px;
                 }
                 .logoF{
                     width: 30px;
@@ -190,6 +184,282 @@ body{
                     padding: 3px;
                     margin: 0px 3px 0px 12px;   
                 }
+            }
+        }
+    }
+}
+
+/* estilos de productos */
+
+body{
+    .headerProductos{
+        width: 100%;
+        .navProductos{
+            margin-left: map-get($map: $nav-pages, $key: margin-menu);
+        }
+    }
+    .mainProductos{
+        padding-right: 0;
+        .cabeceraProductos{
+            width: 100%;
+            height: 120px;
+            background-image: url(../img/background.image/fondo.productos.jpg);
+            @extend %img-titulo;
+            border-bottom: 3px solid #59CE8F;
+            .h1Productos{
+                text-align: center;
+                color: green;
+                font-family: 'Abel', sans-serif;
+                font-size: 40px;
+                margin-top: 30px;
+            }
+        }
+        div{
+            .lista{
+                padding: 10px;
+                margin: 30px 0;
+                div{         
+                    .productos{
+                        margin: 30px 0;
+                        .tarjeta{
+                            margin: 30px 30px;
+                            padding: 0px;
+                            font-family: 'Abel', sans-serif;
+                        }
+                        .tarjeta:hover{
+                            @include animacion-card;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* estilos de la-tienda */ 
+
+body{
+    .tienda{
+        border-bottom: 20px solid green;
+        padding: 0;
+        .navTienda{
+            position: map-get($map: $nav-pages, $key: posicion-pages);
+            width: map-get($map: $nav-pages, $key: w-pages);
+        }
+        .h1Tienda{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Satisfy', cursive;   
+            color: rgb(25, 133, 25);
+            text-shadow: 3px 1px 3px black;
+            margin: 0;  
+            width: 100%;
+            height: 18vh;
+            background-image: url(../img/background.image/fondo.productos.jpg);
+            @extend %img-titulo;
+        }
+    }
+    .mainLaTienda{
+        display: grid;
+        grid-template-columns: 1.5fr 0.8fr;
+        grid-template-rows: 20% 80%;
+        grid-template-areas:
+                            "ubicacion ubicacion"
+                            "mainLaTienda1 mainLaTienda2" ;
+                            
+        column-gap: 10px;
+        height: auto;
+        .ubicacion{
+            grid-area: ubicacion;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            p{
+                margin-top: 20px;
+            }
+            img{
+                width: 50px;
+                height: 60px;
+            }
+        }
+        .mainLaTienda1{
+            grid-area: mainLaTienda1;
+            margin: 0 0 50px 20px;
+            height: auto;
+            .mapa{
+                width: 70%;
+                height: 60hv;
+                border: 1px solid black;
+            }
+        }
+        .mainLaTienda2{
+            grid-area: mainLaTienda2;
+            display: flex;
+            flex-direction: column;
+            .tiendaIcon{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                .p-icon{
+                    margin: 10px;
+                    align-items: center;
+                    font-family: 'Abel', sans-serif;
+                }
+            }
+        }
+    }
+}
+
+/* estilos contacto */ 
+
+.hojaContacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 55% 35%;
+    grid-template-areas:
+                        "header header"
+                        "main main"
+                        "footer footer";
+    background-image: url(../img/background.image/fondo.contacto.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 130vh;
+    .headerContacto{
+        grid-area: header;
+        .navContacto{
+            margin-left: map-get($map: $nav-pages, $key: margin-menu);
+            margin-bottom: map-get($map: $nav-pages, $key: pdg-pages);
+        }
+    }
+    .mainContacto{
+        grid-area: main;
+        margin-bottom: 40px;
+        .formulario{
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            background: rgba(0, 0, 1, 0.6);
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            color: whitesmoke;
+            border-radius: 10px;
+            fieldset{
+                .form{
+                    padding: 10px;
+                    margin: 5px;
+                    label{
+                        padding: 3px;
+                        margin-right: 20px;
+                    }
+                    input{
+                        width: 250px;
+                        height: 25px;
+                        border-radius: 10px;
+                        border-style: hidden;
+                    }
+                }
+                .formDistinto{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 10px;
+                    margin: 5px;
+                    input{
+                        width: 500px;
+                        height: 100px;
+                        margin: 10px 0 10px 0;
+                        border-radius: 10px;  
+                        border-style: hidden;
+                    }
+                }
+                .formButton{
+                    display: flex;
+                    justify-content: space-around;
+                    padding: 5px;
+                    input{
+                        width: 10rem;
+                        height: 1.5rem;
+                        border-radius: 10px;
+                        border-style: hidden;
+                        font-family: 'Abel', sans-serif;
+                        font-size: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .footerStyleContacto{
+        grid-area: footer;
+    }
+}
+
+/* estilos Mas.. */ 
+
+body{
+    .headerMas{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 0;
+        .navTienda{
+            position: map-get($map: $nav-pages, $key:posicion-pages);
+            width: map-get($map: $nav-pages, $key:w-pages);
+        }
+        .h1Mas{
+            font-family: 'Edu VIC WA NT Beginner', cursive;
+            margin: 20px 0;
+            color: #59CE8F;
+            text-shadow: 4px 1px 5px black; 
+            font-size: 40px; 
+        }
+    }
+    .mainMas{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 30% 50%;
+        grid-template-areas: 
+                            "estiloTip"
+                            "imgMas"
+                            "listaTip";
+        align-items: center;
+        height: 100%;
+        .estiloTip{
+            grid-area: estiloTip;
+            display: flex;
+            justify-content: center;
+            font-family: 'Abel', sans-serif;
+            font-size: 1.5rem;
+            height: 100%;
+            h2{
+                margin: 10px 60px;
+            }
+        }
+        .imgMas{
+            grid-area: imgMas;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 40%;
+                height: 40%;
+            }
+        }
+        .listaTip{
+            grid-area: listaTip;
+            margin: 30px;
+            font-family: 'Abel', sans-serif;
+            font-size: 20px;
+            background-color: black;
+            color: whitesmoke;
+            width: auto;
+            border-radius: 20px;
+            ul{
+                margin: 30px;
+                padding: 10px;
             }
         }
     }

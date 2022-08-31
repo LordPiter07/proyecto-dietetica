@@ -1,8 +1,12 @@
-/*Ajustes iniciales y cabecera*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+body .mainProductos .cabeceraProductos, body .tienda .h1Tienda {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 /* estilos del index*/
 body {
@@ -28,18 +32,18 @@ body {
       width: 100%; }
       body .headerIndex .menuNav nav {
         display: flex;
+        justify-content: center;
         width: 100%;
-        padding-top: 10px;
-        justify-content: center; }
+        padding-top: 10px; }
         body .headerIndex .menuNav nav ul li {
           display: inline-block; }
     body .headerIndex .indexNav {
       background-image: linear-gradient(to right, #34626C, black); }
       body .headerIndex .indexNav ul li a {
+        font-family: 'Abel', sans-serif;
         text-decoration: none;
         color: whitesmoke;
         padding: 10px;
-        font-family: 'Abel', sans-serif;
         font-size: 18px;
         margin: 0px; }
       body .headerIndex .indexNav ul li a:hover {
@@ -75,8 +79,8 @@ body {
     body .mainHome .imgIndex2 {
       grid-area: img-2;
       justify-self: center;
-      width: 75%;
-      text-align: center; }
+      text-align: center;
+      width: 75%; }
     body .mainHome .imgIndex3 {
       grid-area: img-3;
       justify-self: center;
@@ -124,12 +128,222 @@ body {
         width: 40px;
         height: 40px; }
       body footer div .logoRedes .logoStyle {
-        font-size: 17px; }
+        font-size: 17px;
+        margin-top: 10px; }
       body footer div .logoRedes .logoF {
         width: 30px;
         height: 30px;
         padding: 3px;
         margin: 0px 3px 0px 12px; }
+
+/* estilos de productos */
+body .headerProductos {
+  width: 100%; }
+  body .headerProductos .navProductos {
+    margin-left: 0; }
+
+body .mainProductos {
+  padding-right: 0; }
+  body .mainProductos .cabeceraProductos {
+    width: 100%;
+    height: 120px;
+    background-image: url(../img/background.image/fondo.productos.jpg);
+    border-bottom: 3px solid #59CE8F; }
+    body .mainProductos .cabeceraProductos .h1Productos {
+      text-align: center;
+      color: green;
+      font-family: 'Abel', sans-serif;
+      font-size: 40px;
+      margin-top: 30px; }
+  body .mainProductos div .lista {
+    padding: 10px;
+    margin: 30px 0; }
+    body .mainProductos div .lista div .productos {
+      margin: 30px 0; }
+      body .mainProductos div .lista div .productos .tarjeta {
+        margin: 30px 30px;
+        padding: 0px;
+        font-family: 'Abel', sans-serif; }
+      body .mainProductos div .lista div .productos .tarjeta:hover {
+        transform: scale(1.3);
+        box-shadow: 2px 2px 10px rgba(75, 72, 72, 0.24); }
+
+/* estilos de la-tienda */
+body .tienda {
+  border-bottom: 20px solid green;
+  padding: 0; }
+  body .tienda .navTienda {
+    position: static;
+    width: 100%; }
+  body .tienda .h1Tienda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Satisfy', cursive;
+    color: #198519;
+    text-shadow: 3px 1px 3px black;
+    margin: 0;
+    width: 100%;
+    height: 18vh;
+    background-image: url(../img/background.image/fondo.productos.jpg); }
+
+body .mainLaTienda {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "ubicacion ubicacion" "mainLaTienda1 mainLaTienda2";
+  column-gap: 10px;
+  height: auto; }
+  body .mainLaTienda .ubicacion {
+    grid-area: ubicacion;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px; }
+    body .mainLaTienda .ubicacion p {
+      margin-top: 20px; }
+    body .mainLaTienda .ubicacion img {
+      width: 50px;
+      height: 60px; }
+  body .mainLaTienda .mainLaTienda1 {
+    grid-area: mainLaTienda1;
+    margin: 0 0 50px 20px;
+    height: auto; }
+    body .mainLaTienda .mainLaTienda1 .mapa {
+      width: 70%;
+      height: 60hv;
+      border: 1px solid black; }
+  body .mainLaTienda .mainLaTienda2 {
+    grid-area: mainLaTienda2;
+    display: flex;
+    flex-direction: column; }
+    body .mainLaTienda .mainLaTienda2 .tiendaIcon {
+      display: flex;
+      align-items: center;
+      padding: 10px; }
+      body .mainLaTienda .mainLaTienda2 .tiendaIcon .p-icon {
+        margin: 10px;
+        align-items: center;
+        font-family: 'Abel', sans-serif; }
+
+/* estilos contacto */
+.hojaContacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 55% 35%;
+  grid-template-areas: "header header" "main main" "footer footer";
+  background-image: url(../img/background.image/fondo.contacto.jpg);
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 130vh; }
+  .hojaContacto .headerContacto {
+    grid-area: header; }
+    .hojaContacto .headerContacto .navContacto {
+      margin-left: 0;
+      margin-bottom: 10px; }
+  .hojaContacto .mainContacto {
+    grid-area: main;
+    margin-bottom: 40px; }
+    .hojaContacto .mainContacto .formulario {
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+      background: rgba(0, 0, 1, 0.6);
+      font-family: 'Abel', sans-serif;
+      font-size: 20px;
+      color: whitesmoke;
+      border-radius: 10px; }
+      .hojaContacto .mainContacto .formulario fieldset .form {
+        padding: 10px;
+        margin: 5px; }
+        .hojaContacto .mainContacto .formulario fieldset .form label {
+          padding: 3px;
+          margin-right: 20px; }
+        .hojaContacto .mainContacto .formulario fieldset .form input {
+          width: 250px;
+          height: 25px;
+          border-radius: 10px;
+          border-style: hidden; }
+      .hojaContacto .mainContacto .formulario fieldset .formDistinto {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        margin: 5px; }
+        .hojaContacto .mainContacto .formulario fieldset .formDistinto input {
+          width: 500px;
+          height: 100px;
+          margin: 10px 0 10px 0;
+          border-radius: 10px;
+          border-style: hidden; }
+      .hojaContacto .mainContacto .formulario fieldset .formButton {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px; }
+        .hojaContacto .mainContacto .formulario fieldset .formButton input {
+          width: 10rem;
+          height: 1.5rem;
+          border-radius: 10px;
+          border-style: hidden;
+          font-family: 'Abel', sans-serif;
+          font-size: 90%; }
+  .hojaContacto .footerStyleContacto {
+    grid-area: footer; }
+
+/* estilos Mas.. */
+body .headerMas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0; }
+  body .headerMas .navTienda {
+    position: static;
+    width: 100%; }
+  body .headerMas .h1Mas {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    margin: 20px 0;
+    color: #59CE8F;
+    text-shadow: 4px 1px 5px black;
+    font-size: 40px; }
+
+body .mainMas {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 30% 50%;
+  grid-template-areas: "estiloTip" "imgMas" "listaTip";
+  align-items: center;
+  height: 100%; }
+  body .mainMas .estiloTip {
+    grid-area: estiloTip;
+    display: flex;
+    justify-content: center;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5rem;
+    height: 100%; }
+    body .mainMas .estiloTip h2 {
+      margin: 10px 60px; }
+  body .mainMas .imgMas {
+    grid-area: imgMas;
+    display: flex;
+    justify-content: center; }
+    body .mainMas .imgMas img {
+      width: 40%;
+      height: 40%; }
+  body .mainMas .listaTip {
+    grid-area: listaTip;
+    margin: 30px;
+    font-family: 'Abel', sans-serif;
+    font-size: 20px;
+    background-color: black;
+    color: whitesmoke;
+    width: auto;
+    border-radius: 20px; }
+    body .mainMas .listaTip ul {
+      margin: 30px;
+      padding: 10px; }
 
 /* Media Queries */
 @media screen and (max-width: 800px) {
@@ -161,4 +375,51 @@ body {
         margin: 5px; }
     body footer div .logoRedes {
       justify-content: start;
-      width: 100%; } }
+      width: 100%; }
+  /* Productos */
+  body .mainProductos div .lista {
+    width: 100%; }
+  /* La Tienda */
+  body .tienda {
+    display: flex;
+    flex-direction: column;
+    height: auto; }
+    body .tienda .h1Tienda {
+      height: 230px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+  body .mainLaTienda {
+    display: flex;
+    flex-direction: column;
+    height: auto; }
+  /* contacto */
+  .hojaContacto {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; }
+    .hojaContacto .mainContacto .formulario {
+      width: 100%;
+      margin: 30px 0; }
+      .hojaContacto .mainContacto .formulario fieldset .form {
+        display: flex;
+        flex-direction: column; }
+      .hojaContacto .mainContacto .formulario fieldset .formDistinto input {
+        width: 100%; }
+      .hojaContacto .mainContacto .formulario fieldset .formButton {
+        padding: 0x;
+        gap: 2px; }
+        .hojaContacto .mainContacto .formulario fieldset .formButton input {
+          width: 70%; }
+    .hojaContacto .footerStyleContacto {
+      display: none; }
+  /* Mas.. */
+  body .mainMas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto; } }
