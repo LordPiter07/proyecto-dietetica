@@ -133,11 +133,24 @@
     /* Mas.. */ 
 
     body{
+        .headerMas{
+            .encabezado{
+                height: auto;
+            }
+        }
         .mainMas{
             display: flex;
             flex-direction: column;
             justify-content: center;
             height: auto;
+            .textoTip{
+                .estiloTip{
+                    justify-content: center;
+                }
+                .listaTip{
+                    width: auto;
+                }
+            }
         }
     }
 }
