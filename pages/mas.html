@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="shortcut icon" href="../img/Logo-Nutrian.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/style.css">
     <title>Nutricion - Tip</title>
@@ -52,7 +53,7 @@
                                 <ul class="dropdown-menu dropdown-menu-dark">
                                     <li><a class="dropdown-item" href="./mas.html">Tip de la semana</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#">Anteriores</a></li>
+                                    <li><a class="dropdown-item" href="./anteriores.html">Anteriores</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -61,25 +62,34 @@
             </div>
         </nav> 
 
-        <div class="encabezado">
-            <h1 class="h1Mas"> Tip de la semana!</h1>
+        <div class="encabezado animate__animated animate__fadeInDown">
+            <h1 class="h1Mas animate__animated animate__fadeInUp"> Tip de la semana!</h1>
         </div>
 
     </header>
     <main class="mainMas">
 
-        <!-- info/Noticia sobre nutricion a actualizar de manera semanal-->
+        <div class="anteriores">
+            <button class="buttonMas">
+                <div class="icono">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                    </svg>    
+                </div>
+                <a href="./anteriores.html">TIPS ANTERIORES</a>
+            </button>
+        </div>
 
-        <div class="imgMas">
+        <div class="imgMas animate__animated animate__fadeInLeft">
             <img src="../img/cafe-verde.png" alt="granos de cafe verde">
         </div>
 
         <div class="textoTip">
 
-            <div class="estiloTip">
+            <div class="estiloTip animate__animated animate__zoomIn">
                 <h2> CAFE VERDE.. ¿Lo Sabias?</h2>
             </div>
-            <div class="listaTip">
+            <div class="listaTip animate__animated animate__fadeInUp">
                 <ul> 7 Beneficios del café verde:
                     <li> Promueve la pérdida de peso</li>
                     <li> Previene el envejecimiento prematuro y las enfermedades</li>
@@ -108,11 +118,11 @@
             <h2 class="h2Posicion"> SEGUINOS</h2>
             <div class="logoRedes">
                 <img class="logoI" src="../img/footer-Instagram-Logo.png" alt="logo de instagram">
-                <p class="logoStyle"> @TiendaNutriAn</p>
+                <a href="https://www.instagram.com/" target="_blank"><p class="logoStyle"> @TiendaNutriAn</p></a>
             </div>
             <div class="logoRedes">
             <img class="logoF" src="../img/footer-logo.Face.webp" alt="logo de facebook">
-            <p class="logoStyle"> / NutriAn dietetica</p>
+            <a href="https://www.facebook.com/profile.php?id=100054304490210" target="_blank"><p class="logoStyle"> / NutriAn dietetica</p></a>
             </div>
         </div>
 

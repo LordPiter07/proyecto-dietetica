@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
-%img-titulo{
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+%encabezados{
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+%propiedades-S3{
+    display: flex;
+    font-weight: bold;
 }
